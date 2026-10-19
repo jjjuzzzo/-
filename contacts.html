@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контакты сервисного центра КомпМастер. Вызов компьютерного мастера на дом или в офис в Москве, телефон, мессенджеры, онлайн-заявка.">
+  <title>Контакты и вызов мастера — Сервисный центр КомпМастер</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="КомпМастер Главная">
+        <span class="logo-icon">💻</span>
+        <span>КомпМастер</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Основное меню">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="services.html" class="nav-link">Услуги</a>
+        <a href="pricing.html" class="nav-link">Прайс и Калькулятор</a>
+        <a href="contacts.html" class="nav-link">Контакты</a>
+      </nav>
+
+      <div class="header-contacts">
+        <div class="header-phone">
+          <a href="tel:+79991234567" class="phone-number">+7 (999) 123-45-67</a>
+          <span class="work-time">Ежедневно 08:00 – 22:00</span>
+        </div>
+        <a href="contacts.html" class="btn btn-primary">Вызвать мастера</a>
+      </div>
+
+      <button class="burger-button" id="burgerButton" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">Контакты и вызов мастера</h1>
+        <p class="section-subtitle">
+          Оставьте заявку на выезд специалиста или свяжитесь с нами любым удобным способом. Мы на связи ежедневно с 08:00 до 22:00.
+        </p>
+
+        <div class="contact-layout">
+
+          <!-- Left column: Info & channels -->
+          <div class="contact-info-card">
+            <h3>Связаться с нами</h3>
+            
+            <div class="contact-channels">
+              <div class="channel-item">
+                <div class="channel-icon">📞</div>
+                <div class="channel-content">
+                  <h4>Единая диспетчерская</h4>
+                  <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                  <p style="font-size: 0.85rem; font-weight: normal; color: #64748b;">Прием звонков и заявок 24/7</p>
+                </div>
+              </div>
+
+              <div class="channel-item">
+                <div class="channel-icon">💬</div>
+                <div class="channel-content">
+                  <h4>Мессенджеры</h4>
+                  <div class="messengers-list">
+                    <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="messenger-link messenger-tg">
+                      <span>✈️ Telegram</span>
+                    </a>
+                    <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="messenger-link messenger-wa">
+                      <span>🟢 WhatsApp</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="channel-item">
+                <div class="channel-icon">✉️</div>
+                <div class="channel-content">
+                  <h4>Электронная почта</h4>
+                  <a href="mailto:support@compmaster.ru">support@compmaster.ru</a>
+                </div>
+              </div>
+
+              <div class="channel-item">
+                <div class="channel-icon">📍</div>
+                <div class="channel-content">
+                  <h4>Адрес мастерской</h4>
+                  <p>г. Москва, ул. Техническая, д. 15, офис 102</p>
+                  <p style="font-size: 0.85rem; font-weight: normal; color: #64748b;">м. Технопарк (5 минут пешком)</p>
+                </div>
+              </div>
+
+              <div class="channel-item">
+                <div class="channel-icon">🕒</div>
+                <div class="channel-content">
+                  <h4>Режим работы</h4>
+                  <p>Пн–Вс: 08:00 – 22:00</p>
+                  <p style="font-size: 0.85rem; font-weight: normal; color: #64748b;">Без перерывов и праздничных дней</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Workshop visit info -->
+            <div style="background-color: #f1f5f9; border-radius: var(--radius-sm); padding: 18px; border-left: 4px solid var(--primary-color);">
+              <h4 style="font-size: 0.95rem; margin-bottom: 6px; color: var(--text-primary);">Хотите привезти технику сами?</h4>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
+                В мастерской всегда дежурит инженер для проведения срочной диагностики прямо при вас. Есть бесплатная гостевая парковка.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right column: Order / Feedback Form -->
+          <div class="form-card">
+            <h2 class="form-title">Оформить заявку на ремонт или вызов</h2>
+            <p class="form-subtitle">Заполните поля ниже — мастер перезвонит вам в течение 10 минут для согласования времени визита.</p>
+
+            <form class="ajax-form" id="bookingForm">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="clientName" class="form-label">Ваше имя <span class="req">*</span></label>
+                  <input type="text" id="clientName" name="clientName" class="form-control" placeholder="Константин" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="clientPhone" class="form-label">Номер телефона <span class="req">*</span></label>
+                  <input type="tel" id="clientPhone" name="clientPhone" class="form-control" placeholder="+7 (___) ___-__-__" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="deviceType" class="form-label">Тип устройства</label>
+                  <select id="deviceType" name="deviceType" class="form-control">
+                    <option value="pc">Стационарный компьютер (системный блок)</option>
+                    <option value="laptop">Ноутбук</option>
+                    <option value="allinone">Моноблок</option>
+                    <option value="other">Другое устройство</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="serviceType" class="form-label">Основная услуга</label>
+                  <select id="serviceType" name="serviceType" class="form-control">
+                    <option value="diagnostic">Бесплатная диагностика</option>
+                    <option value="os">Установка / переустановка Windows / Linux</option>
+                    <option value="cleaning">Чистка от пыли и замена термопасты</option>
+                    <option value="upgrade">Апгрейд (установка SSD, ОЗУ, видеокарты)</option>
+                    <option value="virus">Удаление вирусов и ускорение</option>
+                    <option value="hardware">Аппаратный ремонт / пайка / замена деталей</option>
+                    <option value="network">Настройка Wi-Fi и сети</option>
+                  </select>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="clientAddress" class="form-label">Адрес для выезда мастера (город, улица, дом, кв.)</label>
+                  <input type="text" id="clientAddress" name="clientAddress" class="form-control" placeholder="г. Москва, ул. Ленина, д. 10, кв. 42">
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="issueDescription" class="form-label">Описание неисправности или симптомов</label>
+                  <textarea id="issueDescription" name="issueDescription" class="form-control" placeholder="Например: Не включается, синий экран смерти (BSOD), сильно шумит вентилятор или греется..."></textarea>
+                </div>
+              </div>
+
+              <label class="form-checkbox">
+                <input type="checkbox" required checked>
+                <span>Я согласен с политикой обработки персональных данных и условиями сервиса</span>
+              </label>
+
+              <button type="submit" class="btn btn-primary btn-block btn-lg">
+                Отправить заявку мастеру
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="color: #ffffff; margin-bottom: 15px;">
+            <span class="logo-icon">💻</span>
+            <span>КомпМастер</span>
+          </div>
+          <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">
+            Квалифицированная компьютерная помощь, ремонт ПК и ноутбуков, установка программного обеспечения и настройка сетей.
+          </p>
+          <p style="font-size: 0.85rem; color: #64748b;">Работаем без выходных и праздников с 08:00 до 22:00.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Навигация</h4>
+          <div class="footer-links">
+            <a href="index.html">Главная</a>
+            <a href="services.html">Все услуги</a>
+            <a href="pricing.html">Прайс-лист</a>
+            <a href="pricing.html#calculator">Калькулятор</a>
+            <a href="contacts.html">Контакты</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <div class="footer-links">
+            <a href="services.html">Установка Windows / Linux</a>
+            <a href="services.html">Чистка от пыли и термопаста</a>
+            <a href="services.html">Замена матриц и клавиатур</a>
+            <a href="services.html">Удаление вирусов</a>
+            <a href="services.html">Сборка ПК на заказ</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Контакты</h4>
+          <div class="footer-links">
+            <a href="tel:+79991234567"><strong>+7 (999) 123-45-67</strong></a>
+            <a href="mailto:support@compmaster.ru">support@compmaster.ru</a>
+            <span>г. Москва, ул. Техническая, д. 15</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Сервисный центр «КомпМастер». Все права защищены.</div>
+        <div>Информация на сайте не является публичной офертой.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Success Window -->
+  <div class="modal-overlay" id="successModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <div class="modal-icon-success">✓</div>
+      <h3 class="modal-title" id="modalTitle">Заявка успешно принята!</h3>
+      <p class="modal-text" id="modalTextContent">
+        Спасибо за обращение! Наш мастер свяжется с вами в течение 10 минут для уточнения деталей и подтверждения выезда.
+      </p>
+      <button class="btn btn-primary btn-block" id="closeModalBtn">Понятно</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

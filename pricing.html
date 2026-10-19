@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Честный прайс-лист на ремонт компьютеров, ноутбуков и установку ОС. Онлайн-калькулятор расчета стоимости ремонта с выездом мастера.">
+  <title>Прайс-лист и онлайн-калькулятор ремонта ПК — КомпМастер</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="КомпМастер Главная">
+        <span class="logo-icon">💻</span>
+        <span>КомпМастер</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Основное меню">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="services.html" class="nav-link">Услуги</a>
+        <a href="pricing.html" class="nav-link">Прайс и Калькулятор</a>
+        <a href="contacts.html" class="nav-link">Контакты</a>
+      </nav>
+
+      <div class="header-contacts">
+        <div class="header-phone">
+          <a href="tel:+79991234567" class="phone-number">+7 (999) 123-45-67</a>
+          <span class="work-time">Ежедневно 08:00 – 22:00</span>
+        </div>
+        <a href="contacts.html" class="btn btn-primary">Вызвать мастера</a>
+      </div>
+
+      <button class="burger-button" id="burgerButton" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-bottom: 30px;">
+      <div class="container">
+        <h1 class="section-title">Прайс-лист и онлайн-калькулятор</h1>
+        <p class="section-subtitle">
+          Прозрачные фиксированные цены без скрытых платежей. Рассчитайте примерную стоимость в калькуляторе или сверьтесь с таблицей цен.
+        </p>
+
+        <!-- Interactive Calculator -->
+        <div class="calculator-box" id="calculator">
+          <h2 class="calculator-title">Калькулятор стоимости ремонта</h2>
+          <p class="calculator-subtitle">Отметьте нужные вам услуги — калькулятор моментально покажет ориентировочную стоимость</p>
+
+          <form id="pricingCalculator" onsubmit="return false;">
+            <div class="calculator-grid">
+              
+              <!-- Left column: Options -->
+              <div class="calc-options-col">
+                <div class="form-group" style="margin-bottom: 22px;">
+                  <label for="calcDeviceType" class="calc-group-title">1. Тип вашего устройства</label>
+                  <select id="calcDeviceType" class="form-control">
+                    <option value="desktop" data-fee="0">Стационарный компьютер (ПК)</option>
+                    <option value="laptop" data-fee="200">Ноутбук стандартный (+200 ₽)</option>
+                    <option value="gaming_laptop" data-fee="400">Игровой ноутбук / Ультрабук (+400 ₽)</option>
+                    <option value="all_in_one" data-fee="500">Моноблок (All-in-One) (+500 ₽)</option>
+                  </select>
+                </div>
+
+                <div class="calc-group-title">2. Выберите необходимые услуги</div>
+                <div class="calc-options-list">
+                  <label class="calc-checkbox-label">
+                    <span class="calc-option-info">
+                      <input type="checkbox" class="calc-service-cb" data-price="0" data-title="Выезд и диагностика" checked>
+                      Выезд мастера и диагностика
+                    </span>
+                    <span class="calc-option-price">0 ₽ (Бесплатно)</span>
+                  </label>
+
+                  <label class="calc-checkbox-label">
+                    <span class="calc-option-info">
+                      <input type="checkbox" class="calc-service-cb" data-price="900" data-title="Установка Windows 10/11 + драйверы">
+                      Установка Windows 10/11 + драйверы
+                    </span>
+                    <span class="calc-option-price">+900 ₽</span>
+                  </label>
+
+                  <label class="calc-checkbox-label">
+                    <span class="calc-option-info">
+                      <input type="checkbox" class="calc-service-cb" data-price="1100" data-title="Установка Linux (Ubuntu/Mint)">
+                      Установка Linux (Ubuntu/Debian/Mint)
+                    </span>
+                    <span class="calc-option-price">+1 100 ₽</span>
+                  </label>
+
+                  <label class="calc-checkbox-label">
+                    <span class="calc-option-info">
+                      <input type="checkbox" class="calc-service-cb" data-price="1300" data-title="Чистка от пыли и замена термопасты">
+                      Чистка от пыли + термопаста Arctic MX-4
+                    </span>
+                    <span class="calc-option-price">+1 300 ₽</span>
+                  </label>
+
+                  <label class="calc-checkbox-label">
+                    <span class="calc-option-info">
+                      <input type="checkbox" class="calc-service-cb" data-price="1000" data-title="Установка SSD и перенос системы">
+                      Установка SSD + клонирование системы
+                    </span>
+                    <span class="calc-option-price">+1 000 ₽</span>
+                  </label>
+
+                  <label class="calc-checkbox-label">
+                    <span class="calc-option-info">
+                      <input type="checkbox" class="calc-service-cb" data-price="500" data-title="Установка оперативной памяти (ОЗУ)">
+                      Увеличение оперативной памяти (ОЗУ)
+                    </span>
+                    <span class="calc-option-price">+500 ₽</span>
+                  </label>
+
+                  <label class="calc-checkbox-label">
+                    <span class="calc-option-info">
+                      <input type="checkbox" class="calc-service-cb" data-price="700" data-title="Удаление вирусов и оптимизация">
+                      Удаление вирусов и ускорение работы
+                    </span>
+                    <span class="calc-option-price">+700 ₽</span>
+                  </label>
+
+                  <label class="calc-checkbox-label">
+                    <span class="calc-option-info">
+                      <input type="checkbox" class="calc-service-cb" data-price="600" data-title="Настройка Wi-Fi роутера">
+                      Настройка Wi-Fi роутера и сети
+                    </span>
+                    <span class="calc-option-price">+600 ₽</span>
+                  </label>
+
+                  <label class="calc-checkbox-label">
+                    <span class="calc-option-info">
+                      <input type="checkbox" class="calc-service-cb" data-price="500" data-title="Срочный выезд мастера (до 40 мин)">
+                      Срочный выезд мастера (до 40 минут)
+                    </span>
+                    <span class="calc-option-price">+500 ₽</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Right column: Summary -->
+              <div class="calc-summary-panel">
+                <div>
+                  <div class="calc-group-title" style="margin-bottom: 20px;">Смета выбранных работ</div>
+                  <div class="summary-breakdown" id="calcBreakdownList">
+                    <!-- Populated dynamically by script.js -->
+                  </div>
+                </div>
+
+                <div>
+                  <div class="summary-total">
+                    <span class="total-label">Итого к оплате:</span>
+                    <span class="total-amount" id="calcTotalAmount">0 ₽</span>
+                  </div>
+                  <p style="font-size: 0.8rem; color: #64748b; margin: 10px 0 16px 0;">
+                    * Точная стоимость фиксируется мастером после бесплатной очной диагностики. Без навязывания доп. услуг!
+                  </p>
+                  <button type="button" class="btn btn-primary btn-block btn-lg" id="orderWithCalcBtn">
+                    Заказать с этим расчетом &rarr;
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+        <!-- Full Transparent Price List -->
+        <h2 class="section-title" style="margin-top: 50px;">Полный прейскурант цен</h2>
+        <p class="section-subtitle">Официальные тарифы на популярные виды работ сервисного центра</p>
+
+        <div class="pricing-table-wrapper">
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Наименование услуги</th>
+                <th>Срок работы</th>
+                <th>Гарантия</th>
+                <th>Стоимость</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Group 1 -->
+              <tr style="background-color: #eff6ff;">
+                <td colspan="4" style="font-weight: 700; color: #1e40af;">Диагностика и выездные услуги</td>
+              </tr>
+              <tr>
+                <td>Выезд мастера на дом или в офис (в пределах города)</td>
+                <td class="col-time">до 45 минут</td>
+                <td>—</td>
+                <td class="col-price">0 ₽ (Бесплатно)</td>
+              </tr>
+              <tr>
+                <td>Аппаратная и программная диагностика (при заказе ремонта)</td>
+                <td class="col-time">20–30 минут</td>
+                <td>—</td>
+                <td class="col-price">0 ₽ (Бесплатно)</td>
+              </tr>
+              <tr>
+                <td>Диагностика без последующего ремонта (в случае отказа)</td>
+                <td class="col-time">30 минут</td>
+                <td>—</td>
+                <td class="col-price">500 ₽</td>
+              </tr>
+
+              <!-- Group 2 -->
+              <tr style="background-color: #eff6ff;">
+                <td colspan="4" style="font-weight: 700; color: #1e40af;">Операционные системы и программное обеспечение</td>
+              </tr>
+              <tr>
+                <td>Чистая установка Windows 10 / 11 с драйверами</td>
+                <td class="col-time">45–60 минут</td>
+                <td>6 месяцев</td>
+                <td class="col-price">от 900 ₽</td>
+              </tr>
+              <tr>
+                <td>Установка дистрибутивов Linux (Ubuntu, Debian, Fedora, Mint)</td>
+                <td class="col-time">60 минут</td>
+                <td>6 месяцев</td>
+                <td class="col-price">от 1 100 ₽</td>
+              </tr>
+              <tr>
+                <td>Сохранение и перенос пользовательских файлов (до 500 Гб)</td>
+                <td class="col-time">30–60 минут</td>
+                <td>100% сохранность</td>
+                <td class="col-price">от 500 ₽</td>
+              </tr>
+              <tr>
+                <td>Удаление вирусов, баннеров-вымогателей, майнеров</td>
+                <td class="col-time">40 минут</td>
+                <td>3 месяца</td>
+                <td class="col-price">от 700 ₽</td>
+              </tr>
+              <tr>
+                <td>Установка пакета офисных программ (MS Office / LibreOffice)</td>
+                <td class="col-time">25 минут</td>
+                <td>—</td>
+                <td class="col-price">от 600 ₽</td>
+              </tr>
+
+              <!-- Group 3 -->
+              <tr style="background-color: #eff6ff;">
+                <td colspan="4" style="font-weight: 700; color: #1e40af;">Профилактика, чистка и система охлаждения</td>
+              </tr>
+              <tr>
+                <td>Комплексная чистка ноутбука от пыли + термопаста Arctic MX-4</td>
+                <td class="col-time">45 минут</td>
+                <td>6 месяцев</td>
+                <td class="col-price">от 1 400 ₽</td>
+              </tr>
+              <tr>
+                <td>Чистка системного блока ПК, продувка блока питания и кулеров</td>
+                <td class="col-time">35 минут</td>
+                <td>6 месяцев</td>
+                <td class="col-price">от 1 200 ₽</td>
+              </tr>
+              <tr>
+                <td>Замена термопрокладок на видеокарте / материнской плате</td>
+                <td class="col-time">40 минут</td>
+                <td>12 месяцев</td>
+                <td class="col-price">от 800 ₽</td>
+              </tr>
+              <tr>
+                <td>Замена вышедшего из строя кулера или вентилятора охлаждения</td>
+                <td class="col-time">30 минут</td>
+                <td>12 месяцев</td>
+                <td class="col-price">от 600 ₽</td>
+              </tr>
+
+              <!-- Group 4 -->
+              <tr style="background-color: #eff6ff;">
+                <td colspan="4" style="font-weight: 700; color: #1e40af;">Аппаратный ремонт и апгрейд комплектующих</td>
+              </tr>
+              <tr>
+                <td>Установка SSD-накопителя (SATA / NVMe M.2) с клонированием системы</td>
+                <td class="col-time">30 минут</td>
+                <td>12 месяцев</td>
+                <td class="col-price">от 1 000 ₽</td>
+              </tr>
+              <tr>
+                <td>Замена экрана (матрицы) ноутбука</td>
+                <td class="col-time">от 40 минут</td>
+                <td>12 месяцев</td>
+                <td class="col-price">от 1 500 ₽</td>
+              </tr>
+              <tr>
+                <td>Замена клавиатуры ноутбука</td>
+                <td class="col-time">от 30 минут</td>
+                <td>6 месяцев</td>
+                <td class="col-price">от 1 100 ₽</td>
+              </tr>
+              <tr>
+                <td>Ремонт разъема питания, USB, Audio Jack</td>
+                <td class="col-time">от 1 часа</td>
+                <td>6 месяцев</td>
+                <td class="col-price">от 1 200 ₽</td>
+              </tr>
+              <tr>
+                <td>Индивидуальная сборка игрового / рабочего ПК под ключ</td>
+                <td class="col-time">1–2 дня</td>
+                <td>12 месяцев</td>
+                <td class="col-price">от 2 500 ₽</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- FAQ Section -->
+        <h2 class="section-title" style="margin-top: 60px;">Часто задаваемые вопросы</h2>
+        <p class="section-subtitle">Отвечаем на главные вопросы по расчетам, выезду и гарантийным обязательствам</p>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Действительно ли выезд мастера и диагностика бесплатны?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Да, если вы заказываете устранение неисправности у нас, выезд мастера по городу и первичная аппаратная/программная диагностика полностью бесплатны. Оплата диагностики (500 ₽) производится исключительно в случае вашего отказа от проведения ремонта после определения причины неисправности.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Может ли измениться цена после приезда мастера?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Нет! Мастер проводит осмотр, выявляет точную поломку и составляет окончательную смету до того, как приступить к работе. Стоимость фиксируется в акте и не увеличивается в процессе ремонта.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Какую гарантию вы даете на выполненные работы?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Мы выдаем официальный бумажный гарантийный талон с печатью. Срок гарантии составляет от 3 до 12 месяцев в зависимости от типа работ и используемых комплектующих. Если в этот период проблема повторится, мастер устранит ее абсолютно бесплатно.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Сохранятся ли мои фотографии, документы и личные файлы при установке ОС?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Да, безусловно. Перед установкой операционной системы мастер делает резервную копию всех ваших личных файлов (папки «Документы», «Рабочий стол», «Загрузки» и любые указанные вами разделы) на защищенный накопитель.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="color: #ffffff; margin-bottom: 15px;">
+            <span class="logo-icon">💻</span>
+            <span>КомпМастер</span>
+          </div>
+          <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">
+            Квалифицированная компьютерная помощь, ремонт ПК и ноутбуков, установка программного обеспечения и настройка сетей.
+          </p>
+          <p style="font-size: 0.85rem; color: #64748b;">Работаем без выходных и праздников с 08:00 до 22:00.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Навигация</h4>
+          <div class="footer-links">
+            <a href="index.html">Главная</a>
+            <a href="services.html">Все услуги</a>
+            <a href="pricing.html">Прайс-лист</a>
+            <a href="pricing.html#calculator">Калькулятор</a>
+            <a href="contacts.html">Контакты</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <div class="footer-links">
+            <a href="services.html">Установка Windows / Linux</a>
+            <a href="services.html">Чистка от пыли и термопаста</a>
+            <a href="services.html">Замена матриц и клавиатур</a>
+            <a href="services.html">Удаление вирусов</a>
+            <a href="services.html">Сборка ПК на заказ</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Контакты</h4>
+          <div class="footer-links">
+            <a href="tel:+79991234567"><strong>+7 (999) 123-45-67</strong></a>
+            <a href="mailto:support@compmaster.ru">support@compmaster.ru</a>
+            <span>г. Москва, ул. Техническая, д. 15</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Сервисный центр «КомпМастер». Все права защищены.</div>
+        <div>Информация на сайте не является публичной офертой.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

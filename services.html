@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Полный каталог услуг сервисного центра КомпМастер: ремонт компьютеров, ноутбуков, установка ОС Windows и Linux, чистка от пыли, апгрейд и сборка.">
+  <title>Услуги по ремонту ПК и ноутбуков — КомпМастер</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="КомпМастер Главная">
+        <span class="logo-icon">💻</span>
+        <span>КомпМастер</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Основное меню">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="services.html" class="nav-link">Услуги</a>
+        <a href="pricing.html" class="nav-link">Прайс и Калькулятор</a>
+        <a href="contacts.html" class="nav-link">Контакты</a>
+      </nav>
+
+      <div class="header-contacts">
+        <div class="header-phone">
+          <a href="tel:+79991234567" class="phone-number">+7 (999) 123-45-67</a>
+          <span class="work-time">Ежедневно 08:00 – 22:00</span>
+        </div>
+        <a href="contacts.html" class="btn btn-primary">Вызвать мастера</a>
+      </div>
+
+      <button class="burger-button" id="burgerButton" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Header Banner -->
+    <section class="section" style="padding-bottom: 20px;">
+      <div class="container">
+        <h1 class="section-title">Каталог услуг по ремонту и обслуживанию ПК</h1>
+        <p class="section-subtitle">
+          Мы выполняем аппаратный и программный ремонт любой сложности. Выберите интересующую категорию или ознакомьтесь со всеми услугами ниже.
+        </p>
+
+        <!-- Category Filters -->
+        <div class="filters-container">
+          <button class="filter-btn active" data-filter="all">Все услуги</button>
+          <button class="filter-btn" data-filter="software">Установка ОС и ПО</button>
+          <button class="filter-btn" data-filter="cooling">Чистка и охлаждение</button>
+          <button class="filter-btn" data-filter="hardware">Аппаратный ремонт и апгрейд</button>
+          <button class="filter-btn" data-filter="network">Сети и безопасность</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="section" style="padding-top: 10px;">
+      <div class="container">
+        <div class="services-grid" id="servicesGrid">
+
+          <!-- 1. Windows OS -->
+          <article class="service-card" data-category="software">
+            <span class="service-badge">Популярно</span>
+            <div class="service-icon">🪟</div>
+            <h2 class="service-title">Установка Windows 10 / 11</h2>
+            <p class="service-description">Установка оригинальной операционной системы с сохранением ваших файлов, разбиением дисков и полным комплектом драйверов.</p>
+            <ul class="service-includes">
+              <li>Лицензионный образ без мусора и вирусов</li>
+              <li>Установка оригинальных драйверов чипсета и GPU</li>
+              <li>Базовый софт: архиватор, браузер, кодеки</li>
+              <li>Срок выполнения: 40–60 минут</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">
+                <span class="price-prefix">Цена от</span>
+                <span class="price-value">900 ₽</span>
+              </div>
+              <a href="contacts.html" class="btn btn-outline">Заказать</a>
+            </div>
+          </article>
+
+          <!-- 2. Linux OS -->
+          <article class="service-card" data-category="software">
+            <div class="service-icon">🐧</div>
+            <h2 class="service-title">Установка Linux (Ubuntu/Debian/Mint)</h2>
+            <p class="service-description">Надежная настройка дистрибутивов Linux второй системой (Dual-Boot) или основной ОС для работы, серверов и программирования.</p>
+            <ul class="service-includes">
+              <li>Настройка загрузчика GRUB и разметка GPT/MBR</li>
+              <li>Установка проприетарных драйверов Nvidia/AMD</li>
+              <li>Настройка окружения рабочего стола и пакетов</li>
+              <li>Срок выполнения: 1 час</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">
+                <span class="price-prefix">Цена от</span>
+                <span class="price-value">1 100 ₽</span>
+              </div>
+              <a href="contacts.html" class="btn btn-outline">Заказать</a>
+            </div>
+          </article>
+
+          <!-- 3. Laptop Cleaning -->
+          <article class="service-card" data-category="cooling">
+            <span class="service-badge">Рекомендуем</span>
+            <div class="service-icon">🧹</div>
+            <h2 class="service-title">Чистка ноутбука от пыли</h2>
+            <p class="service-description">Полный разбор корпуса, удаление пылевого войлока, продувка радиаторов и смазка втулок кулеров специальным маслом.</p>
+            <ul class="service-includes">
+              <li>Замена термопасты на высокоэффективную Arctic MX-4</li>
+              <li>Замена термопрокладок на силовых элементах</li>
+              <li>Тестирование под стресс-нагрузкой AIDA64 / FurMark</li>
+              <li>Срок выполнения: 40–50 минут</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">
+                <span class="price-prefix">Цена от</span>
+                <span class="price-value">1 400 ₽</span>
+              </div>
+              <a href="contacts.html" class="btn btn-outline">Заказать</a>
+            </div>
+          </article>
+
+          <!-- 4. PC Desktop Cleaning -->
+          <article class="service-card" data-category="cooling">
+            <div class="service-icon">🖥️</div>
+            <h2 class="service-title">Чистка системного блока ПК</h2>
+            <p class="service-description">Глубокая очистка корпуса компрессором, снятие башенного кулера CPU, очистка радиатора видеокарты и блока питания.</p>
+            <ul class="service-includes">
+              <li>Нанесение свежей термопасты на процессор</li>
+              <li>Очистка вентиляторов корпуса и БП</li>
+              <li>Кабель-менеджмент для лучшего продува</li>
+              <li>Срок выполнения: 30–45 минут</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">
+                <span class="price-prefix">Цена от</span>
+                <span class="price-value">1 200 ₽</span>
+              </div>
+              <a href="contacts.html" class="btn btn-outline">Заказать</a>
+            </div>
+          </article>
+
+          <!-- 5. SSD & RAM Upgrade -->
+          <article class="service-card" data-category="hardware">
+            <span class="service-badge">Быстро</span>
+            <div class="service-icon">⚡</div>
+            <h2 class="service-title">Установка SSD и апгрейд ОЗУ</h2>
+            <p class="service-description">Замена медленного HDD на твердотельный накопитель NVMe M.2 / SATA с полным клонированием системы без переустановки.</p>
+            <ul class="service-includes">
+              <li>Клонирование Windows со всеми программами</li>
+              <li>Подбор совместимых модулей памяти DDR4/DDR5</li>
+              <li>Увеличение скорости работы до 10 раз</li>
+              <li>Срок выполнения: 30 минут</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">
+                <span class="price-prefix">Цена от</span>
+                <span class="price-value">800 ₽</span>
+              </div>
+              <a href="contacts.html" class="btn btn-outline">Заказать</a>
+            </div>
+          </article>
+
+          <!-- 6. Screen / Matrix Replacement -->
+          <article class="service-card" data-category="hardware">
+            <div class="service-icon">💻</div>
+            <h2 class="service-title">Замена матрицы ноутбука</h2>
+            <p class="service-description">Замена разбитого или залитого экрана ноутбука на оригинальную IPS/OLED матрицу нужной диагонали и разрешения.</p>
+            <ul class="service-includes">
+              <li>Установка оригинальных экранов (FullHD, 2K, 4K)</li>
+              <li>Проверка на отсутствие битых пикселей</li>
+              <li>Гарантия на матрицу до 12 месяцев</li>
+              <li>Срок выполнения: от 45 минут</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">
+                <span class="price-prefix">Цена от</span>
+                <span class="price-value">1 500 ₽</span>
+              </div>
+              <a href="contacts.html" class="btn btn-outline">Заказать</a>
+            </div>
+          </article>
+
+          <!-- 7. PC Custom Build -->
+          <article class="service-card" data-category="hardware">
+            <span class="service-badge">Премиум</span>
+            <div class="service-icon">🔧</div>
+            <h2 class="service-title">Сборка ПК под ключ</h2>
+            <p class="service-description">Профессиональная сборка игровых, дизайнерских и офисных компьютеров с идеальным кабель-менеджментом и настройкой BIOS.</p>
+            <ul class="service-includes">
+              <li>Подбор оптимальных комплектующих под бюджет</li>
+              <li>Сборка, аккуратная укладка проводов, тесты XMP</li>
+              <li>Стресс-тестирование стабильности 2 часа</li>
+              <li>Срок выполнения: 1–2 дня</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">
+                <span class="price-prefix">Цена от</span>
+                <span class="price-value">2 500 ₽</span>
+              </div>
+              <a href="contacts.html" class="btn btn-outline">Заказать</a>
+            </div>
+          </article>
+
+          <!-- 8. Motherboard Repair -->
+          <article class="service-card" data-category="hardware">
+            <div class="service-icon">🔬</div>
+            <h2 class="service-title">Ремонт материнских плат и пайка</h2>
+            <p class="service-description">Компонентный ремонт цепей питания, замена пробитых мосфетов, ШИМ-контроллеров, реболлинг чипсетов и видеочипов.</p>
+            <ul class="service-includes">
+              <li>Пайка на инфракрасной паяльной станции</li>
+              <li>Восстановление после попадания жидкости</li>
+              <li>Прошивка BIOS через программатор (SPI)</li>
+              <li>Срок выполнения: 1–3 дня</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">
+                <span class="price-prefix">Цена от</span>
+                <span class="price-value">2 000 ₽</span>
+              </div>
+              <a href="contacts.html" class="btn btn-outline">Заказать</a>
+            </div>
+          </article>
+
+          <!-- 9. Virus Removal -->
+          <article class="service-card" data-category="network">
+            <div class="service-icon">🛡️</div>
+            <h2 class="service-title">Удаление вирусов и рекламы</h2>
+            <p class="service-description">Устранение вредоносных программ, блокировщиков экрана, скрытых майнеров, вирусов-шифровальщиков и навязчивых баннеров.</p>
+            <ul class="service-includes">
+              <li>Сканирование загрузочными дисками Rescue Disk</li>
+              <li>Восстановление системных файлов и реестра</li>
+              <li>Установка и настройка антивируса</li>
+              <li>Срок выполнения: 40–50 минут</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">
+                <span class="price-prefix">Цена от</span>
+                <span class="price-value">700 ₽</span>
+              </div>
+              <a href="contacts.html" class="btn btn-outline">Заказать</a>
+            </div>
+          </article>
+
+          <!-- 10. Wi-Fi & Network Setup -->
+          <article class="service-card" data-category="network">
+            <div class="service-icon">📶</div>
+            <h2 class="service-title">Настройка Wi-Fi роутеров и сетей</h2>
+            <p class="service-description">Настройка интернет-подключения любого провайдера, создание бесшовных Mesh-сетей, обжимка коннекторов RJ-45.</p>
+            <ul class="service-includes">
+              <li>Защита беспроводной сети стойким паролем WPA3</li>
+              <li>Настройка портов, DNS, гостевой сети</li>
+              <li>Устранение «мертвых зон» в квартире или офисе</li>
+              <li>Срок выполнения: 30 минут</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">
+                <span class="price-prefix">Цена от</span>
+                <span class="price-value">600 ₽</span>
+              </div>
+              <a href="contacts.html" class="btn btn-outline">Заказать</a>
+            </div>
+          </article>
+
+          <!-- 11. Data Recovery -->
+          <article class="service-card" data-category="network">
+            <div class="service-icon">💾</div>
+            <h2 class="service-title">Восстановление удаленных данных</h2>
+            <p class="service-description">Спасение ценных фотографий, документов и баз данных после форматирования, сбоев файловой системы, поломки HDD/флешек.</p>
+            <ul class="service-includes">
+              <li>Восстановление структуры папок и файлов</li>
+              <li>Работа с нечитаемыми секторами (Bad-блоками)</li>
+              <li>Конфиденциальность гарантируется договором</li>
+              <li>Срок выполнения: 1–2 дня</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">
+                <span class="price-prefix">Цена от</span>
+                <span class="price-value">1 500 ₽</span>
+              </div>
+              <a href="contacts.html" class="btn btn-outline">Заказать</a>
+            </div>
+          </article>
+
+          <!-- 12. Office & Software Setup -->
+          <article class="service-card" data-category="software">
+            <div class="service-icon">📦</div>
+            <h2 class="service-title">Настройка офисного и спец. ПО</h2>
+            <p class="service-description">Установка пакетов Microsoft Office, LibreOffice, графических редакторов, 1С:Предприятие, криптопровайдеров и ЭЦП.</p>
+            <ul class="service-includes">
+              <li>Настройка электронных подписей и плагинов Госуслуг</li>
+              <li>Установка архиваторов, PDF-редакторов</li>
+              <li>Обучение пользователя базовым функциям</li>
+              <li>Срок выполнения: 30–45 минут</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">
+                <span class="price-prefix">Цена от</span>
+                <span class="price-value">650 ₽</span>
+              </div>
+              <a href="contacts.html" class="btn btn-outline">Заказать</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA Banner -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-banner-content">
+            <h2>Не нашли нужную услугу?</h2>
+            <p>Опишите проблему мастеру по телефону — мы ремонтируем любую технику и выполняем нестандартные задачи!</p>
+          </div>
+          <a href="contacts.html" class="btn btn-lg">Задать вопрос мастеру</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="color: #ffffff; margin-bottom: 15px;">
+            <span class="logo-icon">💻</span>
+            <span>КомпМастер</span>
+          </div>
+          <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">
+            Квалифицированная компьютерная помощь, ремонт ПК и ноутбуков, установка программного обеспечения и настройка сетей.
+          </p>
+          <p style="font-size: 0.85rem; color: #64748b;">Работаем без выходных и праздников с 08:00 до 22:00.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Навигация</h4>
+          <div class="footer-links">
+            <a href="index.html">Главная</a>
+            <a href="services.html">Все услуги</a>
+            <a href="pricing.html">Прайс-лист</a>
+            <a href="pricing.html#calculator">Калькулятор</a>
+            <a href="contacts.html">Контакты</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <div class="footer-links">
+            <a href="services.html">Установка Windows / Linux</a>
+            <a href="services.html">Чистка от пыли и термопаста</a>
+            <a href="services.html">Замена матриц и клавиатур</a>
+            <a href="services.html">Удаление вирусов</a>
+            <a href="services.html">Сборка ПК на заказ</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Контакты</h4>
+          <div class="footer-links">
+            <a href="tel:+79991234567"><strong>+7 (999) 123-45-67</strong></a>
+            <a href="mailto:support@compmaster.ru">support@compmaster.ru</a>
+            <span>г. Москва, ул. Техническая, д. 15</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Сервисный центр «КомпМастер». Все права защищены.</div>
+        <div>Информация на сайте не является публичной офертой.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
